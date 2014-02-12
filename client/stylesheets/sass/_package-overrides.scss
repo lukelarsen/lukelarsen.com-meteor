@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * IRON-ROUTER
+*/
+
+
+
+
+
+/*------------------------------------*\
+    IRON-ROUTER
+\*------------------------------------*/
+
+#iron-router-progress{
+    margin-top: 0;
+    background-color: $gray5;
+    border-color: $gray5;
+    box-shadow: 0 0 5px rgba(154, 158, 161, 0.5);
+}
+
+#iron-router-progress.spinner:before{
+    border-color: $gray5;
+}
+

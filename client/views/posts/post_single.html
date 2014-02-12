@@ -1,0 +1,28 @@
+<template name="postSingle">
+    <div class="post-image  animate  animate--fadein">
+        <a href="{{pathFor 'postsList'}}" class="btn-back">back to posts</a>
+        <span data-picture data-alt="Learning To Program">
+            <span data-src="/images/post_headers/{{image}}-palm@2x.jpg" class="max-width"></span>
+            <span data-src="/images/post_headers/{{image}}-lap@2x.jpg" data-media="(min-width: 325px)" class="max-width"></span>
+            <span data-src="/images/post_headers/{{image}}-desk@2x.jpg" data-media="(min-width: 771px)" class="max-width"></span>
+            <span data-src="/images/post_headers/{{image}}-wide@2x.jpg" data-media="(min-width:1101px)" class="max-width"></span>
+            <noscript>
+                <img src="/images/post_headers/{{image}}/-wide.jpg" alt="Learning To Program">
+            </noscript>
+        </span>
+    </div>
+
+    <div class="content  content--post-single  animate  animate--fadein">
+        <div class="content__block">
+            <div class="post-info">
+                <h2 class="alpha  title">{{title}}</h2>
+                <div class="post-date">{{date}}</div>
+            </div>
+            <div class="post-content">
+{{#markdown}}
+{{{content}}}
+{{/markdown}}
+            </div>
+        </div>
+    </div>
+</template>

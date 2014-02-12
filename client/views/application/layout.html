@@ -1,0 +1,14 @@
+<template name="layout">
+    <header class="animate  animate--fadein">
+        <a href="{{pathFor 'home'}}" class="logo"></a>
+        <div class="logo-type  logo-type--main"></div>
+        <nav class="nav">
+            <span>(</span> <a href="{{pathFor 'postsList'}}">view the posts</a> <span>||</span> <a id="js-to-bio" href="#">read designer bio</a> <span>)</span>
+            {{loginButtons}}
+        </nav>
+    </header>
+
+    {{yield}}
+
+    {{> footer}}
+</template>

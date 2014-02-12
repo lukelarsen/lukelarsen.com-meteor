@@ -1,0 +1,10 @@
+<template name="postsList">
+    <div class="content  animate  animate--fadein">
+        {{#each posts}}
+            {{> postItem}}
+        {{/each}}
+        {{#if nextPath}}
+            <a class="load-more" href="{{nextPath}}">Load More Posts</a>
+        {{/if}}
+    </div>
+</template>

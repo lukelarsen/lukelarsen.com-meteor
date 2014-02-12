@@ -1,0 +1,269 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/**
+ * SIZES
+ * GRAYS
+ * COLORS
+ * FONTS
+ * BREAKPOINTS
+ * MEDIA QUERIES
+ * MIXINS
+    ^ utility
+    ^ font-size
+    ^ sizing
+    ^ headings
+    ^ SVG
+    ^ @2x
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+
+$base-font-size:    16px;
+$base-line-height:  33px;
+$mega:              47px;
+$alpha:             36px;
+$beta:              21px;
+$gamma:             18px;
+$delta:             14px;
+$epsilon:           12px;
+
+
+
+
+
+/*------------------------------------*\ 
+    $GRAYS    
+\*------------------------------------*/
+
+$white:             #FFFFFF;
+$gray1:             #F7F7F7; // background of title
+$gray2:             #F1F1F1; // bar next to title
+$gray3:             #DDDDDD; // brackets around prev next
+$gray4:             #C4C4C4; // app.listen(8000) & icons
+$gray5:             #9A9EA1; // prev / next
+$gray6:             #828282; // body copy
+$gray7:             #787878; // post title
+$gray8:             #5d5d5d; // back link
+$black:             #000000;
+
+
+
+
+/*------------------------------------*\ 
+    $COLORS    
+\*------------------------------------*/
+
+$color1:            #FFA501; // orange light
+$color2:            #FC5700; // orange dark
+
+$dribbble:          #EC4989;
+$twitter:           #54A8E5;
+$github:            #333333;
+$linkedin:          #0075B7;
+$rss:               $color1;
+$email:             #5AB300;
+
+
+
+
+
+/*------------------------------------*\ 
+    $BREAKPOINTS    
+\*------------------------------------*/
+
+$breakpoints: (
+    'palm' '(max-width: 480px)',
+    'lap' '(min-width: 481px) and (max-width: 805px)',
+    'portable' '(max-width: 805px)',
+    'desk' '(max-width: 806px)',
+    'wide' '(min-width:1600px)'
+)!default;
+
+
+/**
+ * Define where to set breakpoints
+ */
+$lap-start:         481px!default;
+$desk-start:        806px!default;
+$desk-wide-start:   1600px!default;
+
+
+
+
+
+/*------------------------------------*\ 
+    $FONTS    
+\*------------------------------------*/
+
+$script:                "Samantha Italic";
+$sans-serif-light:      "Helvetica Neue", Helvetica, sans-serif;
+$sans-serif:            Helvetica, sans-serif;
+
+
+
+
+
+/*------------------------------------*\ 
+    $MEDIA QUERIES    
+\*------------------------------------*/
+
+/**
+ * We define some broad breakpoints above and they are picked here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * Work out the end points:
+ */
+$palm-end:              $lap-start - 1px;
+$lap-end:               $desk-start - 1px;
+
+@mixin media-query($media-query){
+    @if $media-query == palm{
+        @media only screen and (max-width:$palm-end) { @content; }
+    }
+
+    @if $media-query == lap{
+        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+    }
+
+    @if $media-query == lap-and-up{
+        @media only screen and (min-width:$lap-start) { @content; }
+    }
+
+    @if $media-query == portable{
+        @media only screen and (max-width:$lap-end) { @content; }
+    }
+
+    @if $media-query == desk{
+        @media only screen and (min-width:$desk-start) { @content; }
+    }
+
+    @if $media-query == desk-wide{
+        @media only screen and (min-width: $desk-wide-start) { @content; }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\ 
+    $MIXINS    
+\*------------------------------------*/
+
+/**
+ * ^UTILITY 
+ */
+
+.cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.display-none{
+    display: none;
+}
+
+
+/**
+ * ^FONT-SIZING
+*/
+
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+
+/**
+ * ^SIZING
+*/
+
+@mixin sizing($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin square($size) {
+    width: $size;
+    height: $size;
+}
+
+
+/**
+ * ^HEADINGS
+*/
+
+// @include headings(1,6){ ... }
+@mixin headings($from: 1, $to: 6){
+    $headings_selector: "";
+    @for $i from $from through $to {
+        $headings_selector : $headings_selector + "h#{$i}";
+        @if $i < $to {
+            $headings_selector: $headings_selector + ",";
+        }
+    }
+    #{$headings_selector} {
+        @content
+    }
+}
+
+
+/**
+ * ^SVG
+ */
+
+@mixin svg-background($file_name) {
+    background-image: url('/images/#{$file_name}.png');
+    background-image: none, url('/images/#{$file_name}.svg');
+}
+
+
+/**
+ * ^@2x
+ */
+
+// Media Queries - Retina - http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss & http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
+@mixin image-2x($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url(#{$image});
+//        background-image: url('/images/#{$gimpskimp}');
+        background-size: $width $height;
+    }
+}

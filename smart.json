@@ -1,0 +1,12 @@
+{
+  "packages": {
+    "scss": {},
+    "bourbon-scss": {},
+    "iron-router": {},
+    "picturefill": {},
+    "spin": {},
+    "iron-router-progress": {},
+    "houston": {},
+    "jquery-scrollTo": {}
+  }
+}

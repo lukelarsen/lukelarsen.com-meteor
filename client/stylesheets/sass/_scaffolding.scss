@@ -1,0 +1,336 @@
+/*------------------------------------*\ 
+    $CONTENTS    
+\*------------------------------------*/ 
+/**
+ * HEADER
+ * CONTENT
+ * FOOTER
+ * BIO SPECIFIC
+ * POST SPECIFIC
+ * ANIMATIONS
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+header{
+    background: url('/images/topbar.png');
+    @include image-2x('/images/topbar2x.png', 3444px, 27px);
+    margin-top: 22px;
+    background-position: center 12px;
+    background-repeat: no-repeat;
+    z-index: 2;
+    position: relative;
+
+    @include media-query(palm) {
+        margin-top: 10px;
+        background-image: url('/images/topbar-palm.png');
+        @include image-2x('/images/topbar-palm2x.png', 567px, 27px);
+    }
+}
+
+.faded{
+    opacity: .35;
+}
+
+.logo{
+    @include sizing(84px, 51px);
+    @include svg-background(logo);
+    display: block;
+    margin: 10px auto;
+    background-repeat: no-repeat;
+
+    @include media-query(palm) {
+        @include sizing(44px, 39px);
+        @include svg-background(logo-palm);
+        margin-top: 0;
+        background-position-y: 12px;
+    }
+}
+
+.logo-type{
+    display: block;
+    margin: 85px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+
+    @include media-query(palm) {
+        margin-top: 20px;
+    }
+
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+        margin-top: 42px;
+    }
+}
+
+.logo-type--main{
+    @include sizing(787px, 257px);
+    background-image: url('/images/logo-type-full.jpg');
+    @include image-2x('/images/logo-type-full2x.jpg', 787px, 257px);
+
+    @include media-query(lap) {
+        @include sizing(91%, 242px);
+        background-size: 80%;
+        background-image: url('/images/logo-type-full-med.jpg');
+        @include image-2x('/images/logo-type-full-med2x.jpg', 100%, auto);
+    }
+
+    @include media-query(palm) {
+        @include sizing(100%, 242px);
+        background-size: 100%;
+        background-image: url('/images/logo-type-full-small.jpg');
+        @include image-2x('/images/logo-type-full-small2x.jpg', 100%, auto);
+    }
+}
+
+.logo-type--sub{
+    @include sizing(706px, 192px);
+    background-image: url('/images/logo-type-half.jpg');
+    @include image-2x('/images/logo-type-half2x.jpg', 706px, 192px);
+
+    @include media-query(lap) {
+        @include sizing(80%, 192px);
+        background-size: 80%;
+        background-image: url('/images/logo-type-half-med.jpg');
+        @include image-2x('/images/logo-type-half-med2x.jpg', 100%, auto);
+    }
+
+    @include media-query(palm) {
+        @include sizing(100%, 192px);
+        background-size: 100%;
+        background-image: url('/images/logo-type-half-small.jpg');
+        @include image-2x('/images/logo-type-half-small2x.jpg', 100%, auto);
+        margin-top: 50px;
+    }
+}
+
+
+
+
+/*------------------------------------*\
+    $CONTENT
+\*------------------------------------*/
+
+.content{
+    @include svg-background(divider);
+    margin: 0 auto;
+    padding: 0 35px;
+    padding-bottom: 150px;
+    max-width: 778px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+footer{
+    @include svg-background(fin);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 165px;
+    margin-bottom: 100px;
+}
+
+footer .center-text{
+    @include font-size($beta);
+    margin-top: 100px;
+    color: $gray3;
+    text-align: center;
+
+
+    a{
+        padding: 0 10px;
+        color: $gray6;
+
+        &:hover{
+            color: $color1;
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $BIO SPECIFIC
+\*------------------------------------*/
+
+.bio-photo img{
+    margin: 85px auto 52px;
+    display: block;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $POST SPECIFIC
+\*------------------------------------*/
+.dn{
+    display: none;
+}
+
+
+.post-info{
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+
+
+    margin-top: 75px;
+}
+
+.post-info h2{
+    float: left;
+    margin-top: 0;
+}
+
+.post-info h1{
+    margin-top: 0;
+}
+
+.post-date{
+    float: right;
+    margin-top: 15px;
+    padding: 5px 25px 2px 25px;
+    background-color: $gray1;
+
+    @include media-query(palm) {
+        margin-top: 0;
+        float: left;
+    }
+}
+
+.post-image{
+    @include sizing(100%, 350px);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+
+    @media screen and (min-width: 1101px) {
+        height: 425px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        height: 350px;
+    }
+
+    @media screen and (max-width: 770px) {
+        height: 280px;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 170px;
+    }
+
+    .max-width img{
+        width: 100%;
+    }
+}
+
+.content--post-single{
+//    margin-top: 300px;
+    padding-top: 310px;
+
+    @media screen and (min-width: 1101px) {
+//        margin-top: 375px;
+        padding-top: 385px;
+    }
+
+    @media screen and (max-width: 1100px) {
+//        margin-top: 280px;
+        padding-top: 290px;
+    }
+
+    @media screen and (max-width: 770px) {
+//        margin-top: 210px;
+        padding-top: 164px;
+    }
+
+    @media screen and (max-width: 320px) {
+//        margin-top: 110px;
+        padding-top: 70px;
+    }
+
+    .content__block{
+
+        @include media-query(portable) {
+            display: block;
+        }
+    }
+}
+
+#js-page-top{
+    position: absolute;
+    top: 0;
+}
+
+.content__block code{
+    @include font-size($delta);
+
+    @include media-query(palm) {
+        width: 97%;
+        overflow: scroll;
+    }
+}
+
+.btn-back{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px 25px;
+    color: $gray8;
+    background-color: rgba(255, 255, 255, .6);
+
+    &:hover{
+        background-color: rgba(255,255,255,.8);
+        color: $gray8;
+    }
+
+    @include media-query(palm) {
+        display: none;
+    }
+}
+
+.content__block ul{
+    margin-top: -10px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ANIMATIONS
+\*------------------------------------*/
+
+.animate{
+    transition:all 300ms 0ms ease-in;
+}
+
+.animate--fadein{
+    opacity: 0;
+}
