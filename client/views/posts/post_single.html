@@ -1,4 +1,8 @@
 <template name="postSingle">
+    <header class="faded  animate  animate--fadein">
+        <a href="/" class="logo"></a>
+    </header>
+
     <div class="post-image  animate  animate--fadein">
         <a href="{{pathFor 'postsList'}}" class="btn-back">back to posts</a>
         <span data-picture data-alt="Learning To Program">
@@ -25,4 +29,6 @@
             </div>
         </div>
     </div>
+
+    {{> footer}}
 </template>

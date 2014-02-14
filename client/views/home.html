@@ -1,4 +1,13 @@
 <template name="home">
+    <header class="animate  animate--fadein">
+        <a href="{{pathFor 'home'}}" class="logo"></a>
+        <div class="logo-type  logo-type--main"></div>
+        <nav class="nav">
+            <span>(</span> <a href="{{pathFor 'postsList'}}">view the posts</a> <span>||</span> <a id="js-to-bio" href="#">read designer bio</a> <span>)</span>
+            {{loginButtons}}
+        </nav>
+    </header>
+
     <div class="animate  animate--fadein">
         <span data-picture data-alt="Learning To Program" class="bio-photo">
             <span data-src="/images/photo-bio-small.jpg"></span>
@@ -33,4 +42,6 @@
             <p>I've worked with different backend programmers who used PHP, Ruby, and Python. I recently encountered Node. Coming from a design/frontend background, the language that makes the most sense to me is javascript. Because of this I am going to begin my adventure by playing around with Node js. That might be a mistake in the long run but I'm just going to run with it and see how it goes. Wish me luck. Any help and guidance is greatly appreciated.</p>
         </div>
     </div>
+
+    {{> footer}}
 </template>

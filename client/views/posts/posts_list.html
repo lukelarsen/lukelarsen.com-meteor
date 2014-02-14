@@ -1,4 +1,12 @@
 <template name="postsList">
+    <header class="animate  animate--fadein">
+        <a href="{{pathFor 'home'}}" class="logo"></a>
+        <div class="logo-type  logo-type--sub"></div>
+        <nav class="nav">
+            <span>( </span> <a href="{{pathFor 'home'}}">read designer bio</a> <span>)</span>
+        </nav>
+    </header>
+
     <div class="content  animate  animate--fadein">
         {{#each posts}}
             {{> postItem}}
@@ -7,4 +15,6 @@
             <a class="load-more" href="{{nextPath}}">Load More Posts</a>
         {{/if}}
     </div>
+
+    {{> footer}}
 </template>
