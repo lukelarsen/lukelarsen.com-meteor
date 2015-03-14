@@ -1,0 +1,427 @@
+/* ------ FONTS ------ */
+@font-face{
+    font-family: PolyItalic;
+    src: url('Poly-Italic-webfont.woff') format('woff');        
+}
+
+@font-face{
+    font-family: WeblySleekSemiBoldItalic;
+    src: url('weblysleekuisbi-webfont.woff') format('woff');        
+}
+
+@font-face{
+    font-family: WeblySleekSemiBold;
+    src: url('weblysleekuisb-webfont.woff') format('woff');        
+}
+
+@font-face{
+    font-family: WeblySleekNormal;
+    src: url('weblysleek_ui_normal-webfont.woff') format('woff');        
+}
+
+
+
+/* ------ CENTER ITEM ------ */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'WeblySleekNormal', Helvetica, sans-serif;
+}
+
+.center-item{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+ 
+.center-item__row{
+    width: auto;
+}
+
+
+
+
+
+/* ------ INTRO ------ */
+.triangles{
+    width: 391px;
+    height: 184px;
+    margin: 0 auto;
+}
+
+.intro{
+    margin-top: -40px;
+}
+
+/* Colored Bar */
+.bar{
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.bar--spaced{
+    margin: 50px 0;
+}
+
+.bar span{
+    width: 60px;
+    height: 3px;
+    display: block;
+    float: left;
+}
+
+.bar-orange{
+    background-color: #E04A08;
+}
+
+.bar-yellow{
+    background-color: #EDBD0F;
+}
+
+.bar-blue{
+    background-color: #0B4964;
+}
+
+.bar-blue-light{
+    background-color: #4D95B2;
+}
+
+.bar-green{
+    background-color: #A8BB25;
+}
+
+/* Social Links */
+.social{
+    margin: 20px auto;
+    padding: 0;
+    text-align: center;
+}
+
+.social li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 12px;
+}
+
+/* Arrow */
+.arrow{
+    margin-top: -40px;
+    text-align: center;
+}
+
+
+
+
+
+/* ------ TYPOGRAPHY ------ */
+h1,
+h2,
+p{
+    text-align: center;
+}
+
+h1{
+    font-family: 'WeblySleekSemiBoldItalic', Helvetica, sans-serif;
+    font-size: 28px;
+    color: #131313;
+    font-weight: normal;
+    margin: 40px 0 10px;
+}
+
+h2{
+    font-family: 'PolyItalic', serif;
+    font-size: 22px;
+    color: #9B9B9B;
+    font-weight: normal;
+    margin: 5px 0 15px;
+}
+
+h3{
+    font-family: 'WeblySleekSemiBoldItalic', Helvetica, sans-serif;
+    text-align: center;
+}
+
+h4{
+    font-family: 'WeblySleekSemiBold', Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+h6{
+    font-family: 'WeblySleekSemiBoldItalic', Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #9B9B9B;
+}
+
+p{
+    font-family: 'PolyItalic', serif;
+}
+
+a{
+    color: #9B9B9B;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+}
+
+a:hover{
+    color: #131313;
+}
+
+.sans{
+    font-family: 'WeblySleekNormal', Helvetica, sans-serif;
+}
+
+.sans-bold-italic{
+    font-family: 'WeblySleekSemiBoldItalic', Helvetica, sans-serif;
+}
+
+.gray{
+    color: #9B9B9B;
+}
+
+.orange{
+    color: #E04A08;
+}
+
+.yellow{
+    color: #EDBD0F;
+}
+
+.blue{
+    color: #0B4964;
+}
+
+.light-blue{
+    color: #4D95B2;
+}
+
+.green{
+    color: #A8BB25;
+}
+
+.flush--top{
+    margin-top: 0;
+}
+
+
+
+
+
+/* ------ PROJECTS ------ */
+.projects{
+    margin: 80px auto 0;
+    padding: 0;
+    max-width: 630px;
+}
+
+.projects li{
+    list-style-type: none;
+    margin-bottom: 80px;
+}
+
+.projects li a{
+    display: block;
+    max-width: 630px;
+    height: 190px;
+    background-size: 630px 190px;
+}
+
+.projects a span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: background-color .5s ease-in-out;
+}
+
+.projects a:hover span{
+    background-color: rgba(0,0,0,.3);
+}
+
+.projects__jobdash a{
+    background: url('project-preview-jobdash.jpg') center no-repeat;
+}
+
+.projects__assemble a{
+    background: url('project-preview-assemble.jpg') center no-repeat;
+}
+
+.projects__envelope a{
+    background: url('project-preview-envelope.jpg') no-repeat;
+}
+
+.projects__tennis a{
+    background: url('project-preview-tennis.jpg') no-repeat;
+}
+
+
+
+
+
+
+
+/****** PROJECT SINGLE ******/
+.project-image{
+    margin-bottom: 240px;
+    width: 100%;
+}
+
+/* Tablet and under */
+@media screen and (max-width: 480px) {
+    .project-image{
+        margin-bottom: 100px;
+    }
+}
+
+.project-mobile{
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.animate{
+    transition: all .5s ease-in-out;
+}
+
+.animate--fadein{
+    opacity: 0;
+}
+
+.back-btn{
+    position: fixed;
+    top: 0px;
+    left: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, .8);
+    color: #000;
+}
+
+.relative{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 0;
+    left: 0;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+/****** CONTENT ******/
+.content{
+    max-width: 630px;
+    margin: 0 auto 60px;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content p{
+    text-align: left;
+}
+
+.content p{
+    line-height: 1.4;
+}
+
+.content p.small{
+    font-size: 12px;
+}
+
+.content li{
+    line-height: 1.4;
+}
+
+
+
+
+
+/* ------ FOOTER ------ */
+footer{
+    margin: 120px 0;
+}
+
+.footer-mark{
+    width: 200px;
+    height: 117px;
+    margin: 25px auto;
+}
+
+
+
+
+
+/****** MEDIA QUERIES ******/
+/* Mobile */
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px) {
+    .triangles{
+        width: 300px;
+    }
+
+    .content--resume{
+        padding: 20px;
+    }
+
+    .bar{
+        width: 100%;
+    }
+
+    .bar span{
+        width: 20%;
+    }
+}
+
+
+/* Tablet */
+@media only screen
+and (min-width: 768px)
+and (max-width: 1024px) {
+/* Styles */
+}
+
+
+/* High Res Images */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+    .projects__jobdash a{
+        background: url('project-preview-jobdash@2x.jpg') center no-repeat;
+    }
+
+    .projects__assemble a{
+        background: url('project-preview-assemble@2x.jpg') center no-repeat;
+    }
+
+    .projects__envelope a{
+        background: url('project-preview-envelope@2x.jpg') no-repeat;
+    }
+
+    .projects__tennis a{
+        background: url('project-preview-tennis@2x.jpg') center no-repeat;
+    }
+}
