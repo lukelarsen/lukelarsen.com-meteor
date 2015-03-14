@@ -389,10 +389,6 @@ footer{
 /****** MEDIA QUERIES ******/
 /* Mobile */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    .triangles{
-        width: 300px;
-    }
-
     .content--resume{
         padding: 20px;
     }
