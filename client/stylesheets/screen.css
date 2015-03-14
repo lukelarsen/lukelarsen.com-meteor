@@ -61,8 +61,8 @@ body {
 
 /* ------ INTRO ------ */
 .triangles{
-    width: 391px;
-    height: 184px;
+    width: 264px;
+    height: 129px;
     margin: 0 auto;
 }
 
@@ -292,6 +292,13 @@ a:hover{
     }
 }
 
+.project-tablet{
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .project-mobile{
     max-width: 320px;
     display: block;
@@ -314,6 +321,7 @@ a:hover{
     padding: 10px;
     background: rgba(255, 255, 255, .8);
     color: #000;
+    font-family: 'PolyItalic', Helvetica, sans-serif;
 }
 
 .relative{
@@ -376,9 +384,7 @@ footer{
 
 /****** MEDIA QUERIES ******/
 /* Mobile */
-@media only screen
-and (min-width: 320px)
-and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .triangles{
         width: 300px;
     }
@@ -394,21 +400,21 @@ and (max-width: 480px) {
     .bar span{
         width: 20%;
     }
+
+    .back-btn--top{
+        display: none;
+    }
 }
 
 
 /* Tablet */
-@media only screen
-and (min-width: 768px)
-and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 /* Styles */
 }
 
 
 /* High Res Images */
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
     .projects__jobdash a{
         background: url('project-preview-jobdash@2x.jpg') center no-repeat;
     }
