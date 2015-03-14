@@ -223,13 +223,17 @@ a:hover{
     margin-top: 0;
 }
 
+.space-top{
+    margin-top: 70px;
+}
+
 
 
 
 
 /* ------ PROJECTS ------ */
 .projects{
-    margin: 80px auto 0;
+    margin: 25px auto 0;
     padding: 0;
     max-width: 630px;
 }
