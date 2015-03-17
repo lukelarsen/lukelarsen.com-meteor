@@ -442,11 +442,7 @@ footer{
         margin-bottom: 15px;
     }
 
-    h2{
-
-    }
-
-    h3{
+   h3{
         color: #cecece !important;
     }
 
@@ -460,5 +456,9 @@ footer{
 
     .divider--mini{
         display: none;
+    }
+
+    .projects {
+        -webkit-print-color-adjust: exact;
     }
 }
