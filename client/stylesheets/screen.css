@@ -289,13 +289,6 @@ a:hover{
     width: 100%;
 }
 
-/* Tablet and under */
-@media screen and (max-width: 480px) {
-    .project-image{
-        margin-bottom: 100px;
-    }
-}
-
 .project-tablet{
     max-width: 500px;
     display: block;
@@ -388,7 +381,7 @@ footer{
 
 /****** MEDIA QUERIES ******/
 /* Mobile */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .content--resume{
         padding: 20px;
     }
@@ -404,12 +397,10 @@ footer{
     .back-btn--top{
         display: none;
     }
-}
 
-
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-/* Styles */
+    .project-image{
+        margin-bottom: 100px;
+    }
 }
 
 
@@ -429,5 +420,45 @@ footer{
 
     .projects__tennis a{
         background: url('project-preview-tennis@2x.jpg') center no-repeat;
+    }
+}
+
+
+
+
+
+/****** PRINT ******/
+@media print{
+    .back-btn{
+        display: none;
+    }
+
+    .content{
+        margin-top: 0;
+    }
+
+    .bar{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h2{
+
+    }
+
+    h3{
+        color: #cecece !important;
+    }
+
+    h4{
+        font-size: 14px !important;
+    }
+
+    p, li{
+        font-size: 12px;
+    }
+
+    .divider--mini{
+        display: none;
     }
 }
