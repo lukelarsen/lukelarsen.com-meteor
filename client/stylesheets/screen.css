@@ -1,22 +1,22 @@
 /* ------ FONTS ------ */
 @font-face{
     font-family: PolyItalic;
-    src: url('Poly-Italic-webfont.woff') format('woff');        
+    src: url('Poly-Italic-webfont.woff') format('woff');
 }
 
 @font-face{
     font-family: WeblySleekSemiBoldItalic;
-    src: url('weblysleekuisbi-webfont.woff') format('woff');        
+    src: url('weblysleekuisbi-webfont.woff') format('woff');
 }
 
 @font-face{
     font-family: WeblySleekSemiBold;
-    src: url('weblysleekuisb-webfont.woff') format('woff');        
+    src: url('weblysleekuisb-webfont.woff') format('woff');
 }
 
 @font-face{
     font-family: WeblySleekNormal;
-    src: url('weblysleek_ui_normal-webfont.woff') format('woff');        
+    src: url('weblysleek_ui_normal-webfont.woff') format('woff');
 }
 
 
@@ -50,7 +50,7 @@ body {
     -webkit-justify-content: center;
     justify-content: center;
 }
- 
+
 .center-item__row{
     width: auto;
 }
@@ -405,7 +405,7 @@ footer{
 
 
 /* High Res Images */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .projects__jobdash a{
         background: url('project-preview-jobdash@2x.jpg') center no-repeat;
     }
